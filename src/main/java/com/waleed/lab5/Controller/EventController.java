@@ -78,4 +78,38 @@ public class EventController {
         }
         return new ApiResponse("Event not found with ID: " + id, 404, null);
     }
+
+    /*
+       ⬇️ Extra Endpoints ⬇️
+     */
+
+    // Get events with a minimum capacity
+    @GetMapping("/min-capacity/{minCapacity}")
+    public ApiResponse getEventsByMinCapacity(@PathVariable int minCapacity) {
+        List<Event> result = new ArrayList<>();
+        for (Event e : events) {
+            if (e.getCapacity() >= minCapacity) {
+                result.add(e);
+            }
+        }
+        if (result.isEmpty()) {
+            return new ApiResponse("No events found with minimum capacity: " + minCapacity, 404, null);
+        }
+        return new ApiResponse("Events retrieved successfully", 200, result);
+    }
+
+    // Search event by description keyword
+    @GetMapping("/search/description/{keyword}")
+    public ApiResponse searchEventByDescription(@PathVariable String keyword) {
+        List<Event> result = new ArrayList<>();
+        for (Event e : events) {
+            if (e.getDescription().toLowerCase().contains(keyword.toLowerCase())) {
+                result.add(e);
+            }
+        }
+        if (result.isEmpty()) {
+            return new ApiResponse("No events found matching description keyword: " + keyword, 404, null);
+        }
+        return new ApiResponse("Events found successfully", 200, result);
+    }
 }

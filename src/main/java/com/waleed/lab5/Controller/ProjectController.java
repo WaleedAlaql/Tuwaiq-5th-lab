@@ -97,4 +97,38 @@ public class ProjectController {
         }
         return new ApiResponse("Company projects retrieved successfully", 200, companyProjects);
     }
+
+    /*
+       ⬇️ Extra Endpoints ⬇️
+     */
+
+    // Get projects by status
+    @GetMapping("/status/{status}")
+    public ApiResponse getProjectsByStatus(@PathVariable String status) {
+        List<Project> result = new ArrayList<>();
+        for (Project p : projects) {
+            if (p.getStatus().equalsIgnoreCase(status)) {
+                result.add(p);
+            }
+        }
+        if (result.isEmpty()) {
+            return new ApiResponse("No projects found with status: " + status, 404, null);
+        }
+        return new ApiResponse("Projects retrieved successfully", 200, result);
+    }
+
+    // Search project by description keyword
+    @GetMapping("/search/description/{keyword}")
+    public ApiResponse searchProjectByDescription(@PathVariable String keyword) {
+        List<Project> result = new ArrayList<>();
+        for (Project p : projects) {
+            if (p.getDescription().toLowerCase().contains(keyword.toLowerCase())) {
+                result.add(p);
+            }
+        }
+        if (result.isEmpty()) {
+            return new ApiResponse("No projects found matching description keyword: " + keyword, 404, null);
+        }
+        return new ApiResponse("Projects found successfully", 200, result);
+    }
 }

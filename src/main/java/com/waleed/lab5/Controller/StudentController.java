@@ -89,4 +89,39 @@ public class StudentController {
         }
         return new ApiResponse("Students with GPA greater than average (" + averageGpa + ") retrieved successfully", 200, aboveAverageList);
     }
+
+
+    /*
+       ⬇️ Extra Endpoints ⬇️
+     */
+
+    // Get students by degree
+    @GetMapping("/degree/{degree}")
+    public ApiResponse getStudentsByDegree(@PathVariable String degree) {
+        List<Student> result = new ArrayList<>();
+        for (Student s : students) {
+            if (s.getDegree().equalsIgnoreCase(degree)) {
+                result.add(s);
+            }
+        }
+        if (result.isEmpty()) {
+            return new ApiResponse("No students found with degree: " + degree, 404, null);
+        }
+        return new ApiResponse("Students retrieved successfully", 200, result);
+    }
+
+    // Get students older than a specific age
+    @GetMapping("/older-than/{age}")
+    public ApiResponse getStudentsOlderThan(@PathVariable int age) {
+        List<Student> result = new ArrayList<>();
+        for (Student s : students) {
+            if (s.getAge() > age) {
+                result.add(s);
+            }
+        }
+        if (result.isEmpty()) {
+            return new ApiResponse("No students found older than: " + age, 404, null);
+        }
+        return new ApiResponse("Students retrieved successfully", 200, result);
+    }
 }
