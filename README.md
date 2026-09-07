@@ -27,6 +27,16 @@
 ### 6. [students whose GPA above average]
 <img width="1440" height="900" alt="Screenshot 1448-03-25 at 11 33 43 AM" src="https://github.com/user-attachments/assets/1b55e27f-3d4c-421b-a272-681e54e5ea1a" />
 
+## ⬇️ Extra Endpoints ⬇️
+
+### 7. [Get students by degree]
+<img width="1440" height="900" alt="Screenshot 1448-03-25 at 1 34 04 PM" src="https://github.com/user-attachments/assets/017f03d9-a5ae-4350-92f5-94f5c763646d" />
+
+
+### 8. [Get students older than a specific age]
+<img width="1440" height="900" alt="Screenshot 1448-03-25 at 1 36 14 PM" src="https://github.com/user-attachments/assets/a78f6395-0348-4976-9475-91b7062df970" />
+
+
 ==========================================================================================================================================================================
 
 # [Tracker System]
@@ -62,6 +72,16 @@
 ### 7. [Display all projects by company name]
 <img width="1440" height="900" alt="Screenshot 1448-03-25 at 11 38 56 AM" src="https://github.com/user-attachments/assets/2af60768-e960-4438-bd29-61d597e0c9ae" />
 
+
+## ⬇️ Extra Endpoints ⬇️
+
+### 8. [Get projects by status]
+<img width="1440" height="900" alt="Screenshot 1448-03-25 at 1 40 38 PM" src="https://github.com/user-attachments/assets/cc6ece49-ff9f-49cd-bf00-6413fcc056b0" />
+
+
+### 9. [Search project by description keyword]
+<img width="1440" height="900" alt="Screenshot 1448-03-25 at 1 44 06 PM" src="https://github.com/user-attachments/assets/87f5876b-4e5c-4b48-8db8-15a64240412a" />
+
 ==========================================================================================================================================================================
 
 # [Event System]
@@ -92,3 +112,14 @@
 
 ### 6. [Search event by id]
 <img width="1440" height="900" alt="Screenshot 1448-03-25 at 11 42 55 AM" src="https://github.com/user-attachments/assets/c7926e3e-d5db-417e-bc94-2861a8176ba4" />
+
+
+## ⬇️ Extra Endpoints ⬇️
+
+### 7. [Get events with a minimum capacity]
+<img width="1440" height="900" alt="Screenshot 1448-03-25 at 1 51 36 PM" src="https://github.com/user-attachments/assets/9fb8ec65-9afe-44cd-9834-3b4364bb5b54" />
+
+
+### 8. [Search event by description keyword]
+<img width="1440" height="900" alt="Screenshot 1448-03-25 at 1 53 30 PM" src="https://github.com/user-attachments/assets/1cfae7ea-5121-4df2-ba45-3f27cab37c48" />
+
